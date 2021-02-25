@@ -9,12 +9,25 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    @IBOutlet weak var appNameLabel: UILabel!
+    
+    let sf = SupportFiles()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+       initialLoad()
     }
+}
 
 
+extension ViewController {
+    func initialLoad(){
+        // title app
+        appNameLabel.text = sf.app_name
+        appNameLabel.textAlignment = .center
+        appNameLabel.textColor = sf.textColor
+        appNameLabel.font = UIFont.boldSystemFont(ofSize: sf.sizeFontTitle)
+        
+    }
 }
 
