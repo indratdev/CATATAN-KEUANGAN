@@ -38,9 +38,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" image="home" id="scU-Ha-6Oo">
-                        <inset key="imageInsets" minX="0.0" minY="260" maxX="0.0" maxY="210"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="Home" image="home_ic" id="scU-Ha-6Oo"/>
                     <connections>
                         <outlet property="appNameLabel" destination="m2O-sR-i7p" id="I8A-vK-bS9"/>
                     </connections>
@@ -49,7 +47,7 @@
             </objects>
             <point key="canvasLocation" x="-130" y="-386"/>
         </scene>
-        <!--Item-->
+        <!--Reports-->
         <scene sceneID="o5W-YD-SBH">
             <objects>
                 <viewController id="zuW-63-iHt" sceneMemberID="viewController">
@@ -59,13 +57,13 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="eqh-op-ssJ"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="Sf0-bq-XB2"/>
+                    <tabBarItem key="tabBarItem" title="Reports" image="report_ic" id="Sf0-bq-XB2"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZBF-eO-byq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="845" y="-386"/>
         </scene>
-        <!--Item-->
+        <!--Settings-->
         <scene sceneID="XMf-f5-8Dp">
             <objects>
                 <viewController id="riQ-S9-roh" sceneMemberID="viewController">
@@ -75,7 +73,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="2Ae-zL-i4y"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="sPd-Dz-B2f"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="settings_ic" id="sPd-Dz-B2f"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vpq-z9-2pc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -87,6 +85,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Cte-v0-he0" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="xS2-1N-oKk">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -102,6 +101,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="home" width="512" height="512"/>
+        <image name="home_ic" width="26" height="26"/>
+        <image name="report_ic" width="24" height="24"/>
+        <image name="settings_ic" width="25" height="25"/>
     </resources>
 </document>
