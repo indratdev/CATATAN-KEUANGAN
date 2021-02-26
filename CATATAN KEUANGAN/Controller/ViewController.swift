@@ -9,7 +9,8 @@
 import UIKit
 
 class ViewController: UIViewController {
-    @IBOutlet weak var appNameLabel: UILabel!
+    @IBOutlet weak var viewStatus: UIView!
+    @IBOutlet weak var viewTransaction: UIView!
     
     let sf = SupportFiles()
     
@@ -21,13 +22,10 @@ class ViewController: UIViewController {
 
 
 extension ViewController {
+    
     func initialLoad(){
-        // title app
-        appNameLabel.text = sf.app_name
-        appNameLabel.textAlignment = .center
-        appNameLabel.textColor = sf.textColor
-        appNameLabel.font = UIFont.boldSystemFont(ofSize: sf.sizeFontTitle)
-        
+        viewStatus.layer.cornerRadius = sf.cornerRadiusValue
+        viewTransaction.layer.cornerRadius = sf.cornerRadiusValue
     }
 }
 

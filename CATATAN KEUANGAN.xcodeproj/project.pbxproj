@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8F67E7B625E946240022F0A1 /* TransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F67E7B525E946240022F0A1 /* TransactionViewController.swift */; };
+		8F67E7B925E950FE0022F0A1 /* Keuangan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F67E7B825E950FE0022F0A1 /* Keuangan.swift */; };
 		8FB9B0B425E7F52B0068F318 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB9B0B325E7F52B0068F318 /* AppDelegate.swift */; };
 		8FB9B0B625E7F52B0068F318 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB9B0B525E7F52B0068F318 /* SceneDelegate.swift */; };
 		8FB9B0B825E7F52B0068F318 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB9B0B725E7F52B0068F318 /* ViewController.swift */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8F67E7B525E946240022F0A1 /* TransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewController.swift; sourceTree = "<group>"; };
+		8F67E7B825E950FE0022F0A1 /* Keuangan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keuangan.swift; sourceTree = "<group>"; };
 		8FB9B0B025E7F52B0068F318 /* CATATAN KEUANGAN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CATATAN KEUANGAN.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FB9B0B325E7F52B0068F318 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8FB9B0B525E7F52B0068F318 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +45,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8F67E7B425E946030022F0A1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8FB9B0B725E7F52B0068F318 /* ViewController.swift */,
+				8F67E7B525E946240022F0A1 /* TransactionViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		8F67E7B725E9462B0022F0A1 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				8FB9B0B925E7F52B0068F318 /* Main.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
 		8FB9B0A725E7F52B0068F318 = {
 			isa = PBXGroup;
 			children = (
@@ -62,13 +83,14 @@
 			children = (
 				8FB9B0B325E7F52B0068F318 /* AppDelegate.swift */,
 				8FB9B0B525E7F52B0068F318 /* SceneDelegate.swift */,
-				8FB9B0B725E7F52B0068F318 /* ViewController.swift */,
-				8FB9B0B925E7F52B0068F318 /* Main.storyboard */,
+				8F67E7B425E946030022F0A1 /* Controller */,
+				8F67E7B725E9462B0022F0A1 /* Storyboard */,
 				8FB9B0BC25E7F52D0068F318 /* Assets.xcassets */,
 				8FB9B0BE25E7F52D0068F318 /* LaunchScreen.storyboard */,
 				8FB9B0C125E7F52D0068F318 /* Info.plist */,
 				8FB9B0C725E7F7A50068F318 /* SupportFiles.swift */,
 				8FB9B0C925E7FD780068F318 /* TabItem.swift */,
+				8F67E7B825E950FE0022F0A1 /* Keuangan.swift */,
 			);
 			path = "CATATAN KEUANGAN";
 			sourceTree = "<group>";
@@ -145,10 +167,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				8FB9B0B825E7F52B0068F318 /* ViewController.swift in Sources */,
+				8F67E7B625E946240022F0A1 /* TransactionViewController.swift in Sources */,
 				8FB9B0C825E7F7A50068F318 /* SupportFiles.swift in Sources */,
 				8FB9B0B425E7F52B0068F318 /* AppDelegate.swift in Sources */,
 				8FB9B0CA25E7FD780068F318 /* TabItem.swift in Sources */,
 				8FB9B0B625E7F52B0068F318 /* SceneDelegate.swift in Sources */,
+				8F67E7B925E950FE0022F0A1 /* Keuangan.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
