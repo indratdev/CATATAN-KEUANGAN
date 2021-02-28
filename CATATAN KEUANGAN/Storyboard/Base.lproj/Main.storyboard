@@ -10,7 +10,6 @@
         <!--Catatan Keuangan-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CATATAN_KEUANGAN" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -86,7 +85,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="3U7-JE-ee8">
-                                        <rect key="frame" x="5" y="32" width="394" height="40"/>
+                                        <rect key="frame" x="5" y="31.5" width="394" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="QN4-vq-o9K"/>
                                         </constraints>
@@ -150,6 +149,7 @@
                         <outlet property="viewTransaction" destination="sfn-8J-fWL" id="xSH-eO-7cU"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-130.43478260869566" y="322.76785714285711"/>
         </scene>
@@ -248,7 +248,7 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FXx-vA-8GU">
                                         <rect key="frame" x="0.0" y="20.5" width="374" height="49.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                     </textField>
                                 </subviews>
                                 <constraints>
@@ -262,6 +262,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qph-Gs-Z8i">
                                         <rect key="frame" x="0.0" y="0.0" width="102" height="40"/>
                                         <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="submitBtnPressed:" destination="5uf-zi-29b" eventType="touchUpInside" id="FHk-S4-VXT"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R5H-kE-HFN">
                                         <rect key="frame" x="112" y="0.0" width="102" height="40"/>
@@ -304,7 +307,11 @@
                         <barButtonItem key="backBarButtonItem" title="Kembali" id="sf5-I3-sz2"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="amountTextField" destination="FXx-vA-8GU" id="gvS-HO-WEh"/>
                         <outlet property="cancelBtn" destination="R5H-kE-HFN" id="s2k-ca-XDF"/>
+                        <outlet property="categoryTransactionPickerView" destination="J0N-Dc-KVj" id="CAA-2Q-Uzv"/>
+                        <outlet property="descriptionTextField" destination="Dmt-0K-FNg" id="c04-Uf-6hY"/>
+                        <outlet property="myDatePicker" destination="KVx-0V-fe6" id="ggB-TM-T3e"/>
                         <outlet property="submitBtn" destination="qph-Gs-Z8i" id="eHM-Lo-8KL"/>
                         <outlet property="typeTransactionPickerView" destination="VjD-tL-GHk" id="Fmv-2Q-ZXQ"/>
                     </connections>

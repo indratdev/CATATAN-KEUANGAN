@@ -17,6 +17,11 @@
 		8FB9B0C025E7F52D0068F318 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FB9B0BE25E7F52D0068F318 /* LaunchScreen.storyboard */; };
 		8FB9B0C825E7F7A50068F318 /* SupportFiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB9B0C725E7F7A50068F318 /* SupportFiles.swift */; };
 		8FB9B0CA25E7FD780068F318 /* TabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB9B0C925E7FD780068F318 /* TabItem.swift */; };
+		8FDF243F25EB4EDA00789145 /* KeuanganCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8FDF243D25EB4EDA00789145 /* KeuanganCoreData.xcdatamodeld */; };
+		8FDF244425EB4F7800789145 /* TypeTransaction+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FDF244025EB4F7800789145 /* TypeTransaction+CoreDataClass.swift */; };
+		8FDF244525EB4F7800789145 /* TypeTransaction+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FDF244125EB4F7800789145 /* TypeTransaction+CoreDataProperties.swift */; };
+		8FDF244625EB4F7800789145 /* CategoryTransaction+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FDF244225EB4F7800789145 /* CategoryTransaction+CoreDataClass.swift */; };
+		8FDF244725EB4F7800789145 /* CategoryTransaction+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FDF244325EB4F7800789145 /* CategoryTransaction+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +37,11 @@
 		8FB9B0C125E7F52D0068F318 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8FB9B0C725E7F7A50068F318 /* SupportFiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportFiles.swift; sourceTree = "<group>"; };
 		8FB9B0C925E7FD780068F318 /* TabItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItem.swift; sourceTree = "<group>"; };
+		8FDF243E25EB4EDA00789145 /* Keuangan.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Keuangan.xcdatamodel; sourceTree = "<group>"; };
+		8FDF244025EB4F7800789145 /* TypeTransaction+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TypeTransaction+CoreDataClass.swift"; sourceTree = "<group>"; };
+		8FDF244125EB4F7800789145 /* TypeTransaction+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TypeTransaction+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		8FDF244225EB4F7800789145 /* CategoryTransaction+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CategoryTransaction+CoreDataClass.swift"; sourceTree = "<group>"; };
+		8FDF244325EB4F7800789145 /* CategoryTransaction+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CategoryTransaction+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +72,19 @@
 			path = Storyboard;
 			sourceTree = "<group>";
 		};
+		8FB8909925EA8FA100C2CCC2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8FDF244025EB4F7800789145 /* TypeTransaction+CoreDataClass.swift */,
+				8FDF244125EB4F7800789145 /* TypeTransaction+CoreDataProperties.swift */,
+				8FDF244225EB4F7800789145 /* CategoryTransaction+CoreDataClass.swift */,
+				8FDF244325EB4F7800789145 /* CategoryTransaction+CoreDataProperties.swift */,
+				8F67E7B825E950FE0022F0A1 /* Keuangan.swift */,
+				8FDF243D25EB4EDA00789145 /* KeuanganCoreData.xcdatamodeld */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		8FB9B0A725E7F52B0068F318 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +104,7 @@
 		8FB9B0B225E7F52B0068F318 /* CATATAN KEUANGAN */ = {
 			isa = PBXGroup;
 			children = (
+				8FB8909925EA8FA100C2CCC2 /* Model */,
 				8FB9B0B325E7F52B0068F318 /* AppDelegate.swift */,
 				8FB9B0B525E7F52B0068F318 /* SceneDelegate.swift */,
 				8F67E7B425E946030022F0A1 /* Controller */,
@@ -90,7 +114,6 @@
 				8FB9B0C125E7F52D0068F318 /* Info.plist */,
 				8FB9B0C725E7F7A50068F318 /* SupportFiles.swift */,
 				8FB9B0C925E7FD780068F318 /* TabItem.swift */,
-				8F67E7B825E950FE0022F0A1 /* Keuangan.swift */,
 			);
 			path = "CATATAN KEUANGAN";
 			sourceTree = "<group>";
@@ -166,13 +189,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FDF244425EB4F7800789145 /* TypeTransaction+CoreDataClass.swift in Sources */,
 				8FB9B0B825E7F52B0068F318 /* ViewController.swift in Sources */,
 				8F67E7B625E946240022F0A1 /* TransactionViewController.swift in Sources */,
 				8FB9B0C825E7F7A50068F318 /* SupportFiles.swift in Sources */,
 				8FB9B0B425E7F52B0068F318 /* AppDelegate.swift in Sources */,
 				8FB9B0CA25E7FD780068F318 /* TabItem.swift in Sources */,
+				8FDF244625EB4F7800789145 /* CategoryTransaction+CoreDataClass.swift in Sources */,
+				8FDF244525EB4F7800789145 /* TypeTransaction+CoreDataProperties.swift in Sources */,
 				8FB9B0B625E7F52B0068F318 /* SceneDelegate.swift in Sources */,
 				8F67E7B925E950FE0022F0A1 /* Keuangan.swift in Sources */,
+				8FDF244725EB4F7800789145 /* CategoryTransaction+CoreDataProperties.swift in Sources */,
+				8FDF243F25EB4EDA00789145 /* KeuanganCoreData.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,6 +396,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		8FDF243D25EB4EDA00789145 /* KeuanganCoreData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				8FDF243E25EB4EDA00789145 /* Keuangan.xcdatamodel */,
+			);
+			currentVersion = 8FDF243E25EB4EDA00789145 /* Keuangan.xcdatamodel */;
+			path = KeuanganCoreData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 8FB9B0A825E7F52B0068F318 /* Project object */;
 }
