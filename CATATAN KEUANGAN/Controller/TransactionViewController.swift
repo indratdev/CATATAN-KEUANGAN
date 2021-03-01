@@ -32,6 +32,7 @@ class TransactionViewController: UIViewController {
         typeTransactionPickerView.dataSource = self
         categoryTransactionPickerView.delegate = self
         categoryTransactionPickerView.dataSource = self
+        descriptionTextField.delegate = self
         
         customUI()
         defaultValue()
@@ -43,6 +44,8 @@ class TransactionViewController: UIViewController {
         
     }
     
+    
+    // MARK: Submit Button
     @IBAction func submitBtnPressed(_ sender: UIButton) {
         print(getDatePicker())
         print(selectedCategory)
@@ -181,5 +184,14 @@ extension TransactionViewController {
         }catch(let err){
             print(err)
         }
+    }
+}
+
+extension TransactionViewController: UITextFieldDelegate {
+//    func textFieldDidEndEditing(_ textField: UITextField) {
+//        textField.text = textField.text?.uppercased()
+//    }
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        textField.text = textField.text?.uppercased()
     }
 }
