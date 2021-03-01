@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02341983CFF2568C084769AC /* Pods_CATATAN_KEUANGAN.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D25D21D15D91843E7F3EFEAF /* Pods_CATATAN_KEUANGAN.framework */; };
 		8F67E7B625E946240022F0A1 /* TransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F67E7B525E946240022F0A1 /* TransactionViewController.swift */; };
 		8F67E7B925E950FE0022F0A1 /* Keuangan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F67E7B825E950FE0022F0A1 /* Keuangan.swift */; };
 		8FB9B0B425E7F52B0068F318 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB9B0B325E7F52B0068F318 /* AppDelegate.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8BE521C859AB7CE82C74E359 /* Pods-CATATAN KEUANGAN.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CATATAN KEUANGAN.debug.xcconfig"; path = "Target Support Files/Pods-CATATAN KEUANGAN/Pods-CATATAN KEUANGAN.debug.xcconfig"; sourceTree = "<group>"; };
 		8F67E7B525E946240022F0A1 /* TransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewController.swift; sourceTree = "<group>"; };
 		8F67E7B825E950FE0022F0A1 /* Keuangan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keuangan.swift; sourceTree = "<group>"; };
 		8FB9B0B025E7F52B0068F318 /* CATATAN KEUANGAN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CATATAN KEUANGAN.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -42,6 +44,8 @@
 		8FDF244125EB4F7800789145 /* TypeTransaction+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TypeTransaction+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		8FDF244225EB4F7800789145 /* CategoryTransaction+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CategoryTransaction+CoreDataClass.swift"; sourceTree = "<group>"; };
 		8FDF244325EB4F7800789145 /* CategoryTransaction+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CategoryTransaction+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B7C9B437CC9500D721F5AD6E /* Pods-CATATAN KEUANGAN.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CATATAN KEUANGAN.release.xcconfig"; path = "Target Support Files/Pods-CATATAN KEUANGAN/Pods-CATATAN KEUANGAN.release.xcconfig"; sourceTree = "<group>"; };
+		D25D21D15D91843E7F3EFEAF /* Pods_CATATAN_KEUANGAN.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CATATAN_KEUANGAN.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,12 +53,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02341983CFF2568C084769AC /* Pods_CATATAN_KEUANGAN.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		35F998511065E8608C70E56D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D25D21D15D91843E7F3EFEAF /* Pods_CATATAN_KEUANGAN.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8F67E7B425E946030022F0A1 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -90,6 +103,8 @@
 			children = (
 				8FB9B0B225E7F52B0068F318 /* CATATAN KEUANGAN */,
 				8FB9B0B125E7F52B0068F318 /* Products */,
+				9545865A45E5AD565C3568D1 /* Pods */,
+				35F998511065E8608C70E56D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,9 +119,8 @@
 		8FB9B0B225E7F52B0068F318 /* CATATAN KEUANGAN */ = {
 			isa = PBXGroup;
 			children = (
+				8FBDBC7125ECD73C0039A3B6 /* Supporting Files */,
 				8FB8909925EA8FA100C2CCC2 /* Model */,
-				8FB9B0B325E7F52B0068F318 /* AppDelegate.swift */,
-				8FB9B0B525E7F52B0068F318 /* SceneDelegate.swift */,
 				8F67E7B425E946030022F0A1 /* Controller */,
 				8F67E7B725E9462B0022F0A1 /* Storyboard */,
 				8FB9B0BC25E7F52D0068F318 /* Assets.xcassets */,
@@ -118,6 +132,24 @@
 			path = "CATATAN KEUANGAN";
 			sourceTree = "<group>";
 		};
+		8FBDBC7125ECD73C0039A3B6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8FB9B0B325E7F52B0068F318 /* AppDelegate.swift */,
+				8FB9B0B525E7F52B0068F318 /* SceneDelegate.swift */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9545865A45E5AD565C3568D1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8BE521C859AB7CE82C74E359 /* Pods-CATATAN KEUANGAN.debug.xcconfig */,
+				B7C9B437CC9500D721F5AD6E /* Pods-CATATAN KEUANGAN.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -125,9 +157,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8FB9B0C425E7F52D0068F318 /* Build configuration list for PBXNativeTarget "CATATAN KEUANGAN" */;
 			buildPhases = (
+				75DB1C5EED0733960B8FDF59 /* [CP] Check Pods Manifest.lock */,
 				8FB9B0AC25E7F52B0068F318 /* Sources */,
 				8FB9B0AD25E7F52B0068F318 /* Frameworks */,
 				8FB9B0AE25E7F52B0068F318 /* Resources */,
+				DA4D06A4E31590A40D028D8A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -183,6 +217,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		75DB1C5EED0733960B8FDF59 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CATATAN KEUANGAN-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DA4D06A4E31590A40D028D8A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CATATAN KEUANGAN/Pods-CATATAN KEUANGAN-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CATATAN KEUANGAN/Pods-CATATAN KEUANGAN-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CATATAN KEUANGAN/Pods-CATATAN KEUANGAN-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8FB9B0AC25E7F52B0068F318 /* Sources */ = {
@@ -342,6 +418,7 @@
 		};
 		8FB9B0C525E7F52D0068F318 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8BE521C859AB7CE82C74E359 /* Pods-CATATAN KEUANGAN.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -359,6 +436,7 @@
 		};
 		8FB9B0C625E7F52D0068F318 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B7C9B437CC9500D721F5AD6E /* Pods-CATATAN KEUANGAN.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

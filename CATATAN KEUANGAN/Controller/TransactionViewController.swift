@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import CurrencyTextField
 
 class TransactionViewController: UIViewController {
     @IBOutlet weak var typeTransactionPickerView: UIPickerView!
@@ -33,9 +34,12 @@ class TransactionViewController: UIViewController {
         categoryTransactionPickerView.delegate = self
         categoryTransactionPickerView.dataSource = self
         descriptionTextField.delegate = self
+        amountTextField.delegate = self
         
         customUI()
         defaultValue()
+        
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -193,5 +197,50 @@ extension TransactionViewController: UITextFieldDelegate {
 //    }
     func textFieldDidBeginEditing(_ textField: UITextField) {
         textField.text = textField.text?.uppercased()
+    }
+    
+    func textFieldShouldClear(_ textField: UITextField) -> Bool {
+        switch textField {
+        case amountTextField:
+            textField.text = "Rp. 0.00"
+            return false
+        default:
+            return false
+        }
+        
+    }
+    
+    //Textfield delegates
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+
+        let text: NSString = (textField.text ?? "") as NSString
+        let finalString = text.replacingCharacters(in: range, with: string)
+
+        // 'currency' is a String extension that doews all the number styling
+        amountTextField.text = finalString.currency
+
+        // returning 'false' so that textfield will not be updated here, instead from styling extension
+        return false
+    }
+}
+
+
+extension String {
+    var currency: String {
+        // removing all characters from string before formatting
+        let stringWithoutSymbol = self.replacingOccurrences(of: "Rp", with: "")
+        let stringWithoutComma = stringWithoutSymbol.replacingOccurrences(of: ",", with: "")
+
+        let styler = NumberFormatter()
+        styler.minimumFractionDigits = 0
+        styler.maximumFractionDigits = 0
+        styler.currencySymbol = "Rp"
+        styler.numberStyle = .currency
+
+        if let result = NumberFormatter().number(from: stringWithoutComma) {
+            return styler.string(from: result)!
+        }
+
+        return self
     }
 }
