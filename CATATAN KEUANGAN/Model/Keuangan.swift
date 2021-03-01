@@ -85,6 +85,19 @@ struct Keuangan {
         }
     }
     
+    func insertMasterTypeTransaction(){
+        let newData = TypeTransaction(context: self.context)
+        newData.is_default = true
+        newData.name = "PENGELUARAN"
+        newData.status = 1
+        
+        do {
+            try self.context.save()
+            print("sukses")
+        }catch (let err){
+            print("Error save master type: \(err)")
+        }
+    }
     
     
     func resetAllRecords(in entity : String) // entity = Your_Entity_Name

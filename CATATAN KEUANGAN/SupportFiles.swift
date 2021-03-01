@@ -17,4 +17,9 @@ struct SupportFiles {
     var app_name: String {
       return "CATATAN KEUANGAN"
     }
+    
+    func cancelButtonProcess(controller: ViewController){
+        controller.navigationController?.popViewController(animated: true)
+        controller.dismiss(animated: true, completion: nil)
+    }
 }

@@ -18,6 +18,8 @@
 		8FB9B0C025E7F52D0068F318 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FB9B0BE25E7F52D0068F318 /* LaunchScreen.storyboard */; };
 		8FB9B0C825E7F7A50068F318 /* SupportFiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB9B0C725E7F7A50068F318 /* SupportFiles.swift */; };
 		8FB9B0CA25E7FD780068F318 /* TabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB9B0C925E7FD780068F318 /* TabItem.swift */; };
+		8FBDBC7325ED04820039A3B6 /* ExtensionTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBDBC7225ED04820039A3B6 /* ExtensionTextField.swift */; };
+		8FC80C7E25ED2AF000FD4BE9 /* TransactionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC80C7D25ED2AF000FD4BE9 /* TransactionModel.swift */; };
 		8FDF243F25EB4EDA00789145 /* KeuanganCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8FDF243D25EB4EDA00789145 /* KeuanganCoreData.xcdatamodeld */; };
 		8FDF244425EB4F7800789145 /* TypeTransaction+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FDF244025EB4F7800789145 /* TypeTransaction+CoreDataClass.swift */; };
 		8FDF244525EB4F7800789145 /* TypeTransaction+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FDF244125EB4F7800789145 /* TypeTransaction+CoreDataProperties.swift */; };
@@ -39,6 +41,8 @@
 		8FB9B0C125E7F52D0068F318 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8FB9B0C725E7F7A50068F318 /* SupportFiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportFiles.swift; sourceTree = "<group>"; };
 		8FB9B0C925E7FD780068F318 /* TabItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItem.swift; sourceTree = "<group>"; };
+		8FBDBC7225ED04820039A3B6 /* ExtensionTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionTextField.swift; sourceTree = "<group>"; };
+		8FC80C7D25ED2AF000FD4BE9 /* TransactionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionModel.swift; sourceTree = "<group>"; };
 		8FDF243E25EB4EDA00789145 /* Keuangan.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Keuangan.xcdatamodel; sourceTree = "<group>"; };
 		8FDF244025EB4F7800789145 /* TypeTransaction+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TypeTransaction+CoreDataClass.swift"; sourceTree = "<group>"; };
 		8FDF244125EB4F7800789145 /* TypeTransaction+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TypeTransaction+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -94,6 +98,7 @@
 				8FDF244325EB4F7800789145 /* CategoryTransaction+CoreDataProperties.swift */,
 				8F67E7B825E950FE0022F0A1 /* Keuangan.swift */,
 				8FDF243D25EB4EDA00789145 /* KeuanganCoreData.xcdatamodeld */,
+				8FC80C7D25ED2AF000FD4BE9 /* TransactionModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -128,6 +133,7 @@
 				8FB9B0C125E7F52D0068F318 /* Info.plist */,
 				8FB9B0C725E7F7A50068F318 /* SupportFiles.swift */,
 				8FB9B0C925E7FD780068F318 /* TabItem.swift */,
+				8FBDBC7225ED04820039A3B6 /* ExtensionTextField.swift */,
 			);
 			path = "CATATAN KEUANGAN";
 			sourceTree = "<group>";
@@ -266,8 +272,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				8FDF244425EB4F7800789145 /* TypeTransaction+CoreDataClass.swift in Sources */,
+				8FBDBC7325ED04820039A3B6 /* ExtensionTextField.swift in Sources */,
 				8FB9B0B825E7F52B0068F318 /* ViewController.swift in Sources */,
 				8F67E7B625E946240022F0A1 /* TransactionViewController.swift in Sources */,
+				8FC80C7E25ED2AF000FD4BE9 /* TransactionModel.swift in Sources */,
 				8FB9B0C825E7F7A50068F318 /* SupportFiles.swift in Sources */,
 				8FB9B0B425E7F52B0068F318 /* AppDelegate.swift in Sources */,
 				8FB9B0CA25E7FD780068F318 /* TabItem.swift in Sources */,

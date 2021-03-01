@@ -18,33 +18,37 @@ class TransactionViewController: UIViewController {
     @IBOutlet weak var myDatePicker: UIDatePicker!
     @IBOutlet weak var amountTextField: UITextField!
     @IBOutlet weak var descriptionTextField: UITextField!
+    @IBOutlet weak var hitAmountLabel: UILabel!
     
     let sf = SupportFiles()
     let keu = Keuangan()
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var itemType: [TypeTransactionModel]?
     var itemCategory: [CategoryTransaction]?
-    var selectedTypeTrx: String = ""
-    var selectedCategory: String = ""
+    var selectedTypeTrx: String?
+    var selectedCategory: String?
+    var valueDescription: String?
+    var valueAmount: Double = 0.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        delegateRunning()
+        customUI()
+        defaultValue()
+    }
+    
+    func delegateRunning(){
         typeTransactionPickerView.delegate = self
         typeTransactionPickerView.dataSource = self
         categoryTransactionPickerView.delegate = self
         categoryTransactionPickerView.dataSource = self
         descriptionTextField.delegate = self
         amountTextField.delegate = self
-        
-        customUI()
-        defaultValue()
-        
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        loadCategoryTrx(with: self.selectedTypeTrx)
+        loadCategoryTrx(with: self.selectedTypeTrx!)
         
     }
     
@@ -54,9 +58,18 @@ class TransactionViewController: UIViewController {
         print(getDatePicker())
         print(selectedCategory)
         print(selectedTypeTrx)
+        print(descriptionTextField.text)
+        print(valueAmount)
+        let myDate = getDatePicker()
+        
+        guard let myDescription = descriptionTextField.text else {return}
+        
+        alert(message: "test message", title: "test title")
+        
     }
-    
-    
+    @IBAction func cancelButton(_ sender: UIButton) {
+//        sf.cancelButtonProcess(controller: TransactionViewController.self)
+    }
     
     func fetchTypeTransaction(){
         let typeContext = NSFetchRequest<NSFetchRequestResult>(entityName: "TypeTransaction")
@@ -69,22 +82,6 @@ class TransactionViewController: UIViewController {
             print("error pickerview: \(err)")
         }
     }
-    //
-    func insertMasterTypeTransaction(){
-        let newData = TypeTransaction(context: self.context)
-        newData.is_default = true
-        newData.name = "PENGELUARAN"
-        newData.status = 1
-        
-        do {
-            try self.context.save()
-            print("sukses")
-        }catch (let err){
-            print("Error save master type: \(err)")
-        }
-    }
-    
-    
 }
 
 // MARK: UI & Default
@@ -101,6 +98,7 @@ extension TransactionViewController {
         
         amountTextField.keyboardType = UIKeyboardType.decimalPad
         descriptionTextField.autocapitalizationType = .allCharacters
+        descriptionTextField.autocorrectionType = .no
     }
     
     func defaultValue(){
@@ -150,7 +148,7 @@ extension TransactionViewController: UIPickerViewDelegate, UIPickerViewDataSourc
         case typeTransactionPickerView:
             self.selectedTypeTrx = keu.typeTransaction[row]
             DispatchQueue.main.async {
-                self.loadCategoryTrx(with: self.selectedTypeTrx)
+                self.loadCategoryTrx(with: self.selectedTypeTrx!)
             }
             
         case categoryTransactionPickerView:
@@ -191,56 +189,30 @@ extension TransactionViewController {
     }
 }
 
+// MARK: TEXTFIELD DELEGATE
 extension TransactionViewController: UITextFieldDelegate {
-//    func textFieldDidEndEditing(_ textField: UITextField) {
-//        textField.text = textField.text?.uppercased()
-//    }
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        textField.text = textField.text?.uppercased()
-    }
-    
-    func textFieldShouldClear(_ textField: UITextField) -> Bool {
-        switch textField {
-        case amountTextField:
-            textField.text = "Rp. 0.00"
-            return false
-        default:
-            return false
-        }
-        
-    }
-    
     //Textfield delegates
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-
-        let text: NSString = (textField.text ?? "") as NSString
-        let finalString = text.replacingCharacters(in: range, with: string)
-
-        // 'currency' is a String extension that doews all the number styling
-        amountTextField.text = finalString.currency
-
-        // returning 'false' so that textfield will not be updated here, instead from styling extension
-        return false
-    }
-}
-
-
-extension String {
-    var currency: String {
-        // removing all characters from string before formatting
-        let stringWithoutSymbol = self.replacingOccurrences(of: "Rp", with: "")
-        let stringWithoutComma = stringWithoutSymbol.replacingOccurrences(of: ",", with: "")
-
-        let styler = NumberFormatter()
-        styler.minimumFractionDigits = 0
-        styler.maximumFractionDigits = 0
-        styler.currencySymbol = "Rp"
-        styler.numberStyle = .currency
-
-        if let result = NumberFormatter().number(from: stringWithoutComma) {
-            return styler.string(from: result)!
+        if textField == amountTextField {
+            let text: NSString = (textField.text ?? "") as NSString
+            let finalString = text.replacingCharacters(in: range, with: string)
+            // 'currency' is a String extension that doews all the number styling
+            amountTextField.text = finalString
+            hitAmountLabel.text = finalString.currency
+            
+            let str:String = finalString
+            if let myd:Double = Double(str)
+            {
+                self.valueAmount = myd
+             }
+            
+            
+            // returning 'false' so that textfield will not be updated here, instead from styling extension
+            return false
         }
-
-        return self
+        return true
     }
+    
 }
+
+
