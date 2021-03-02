@@ -1,11 +1,3 @@
-//
-//  ExtensionTextField.swift
-//  CATATAN KEUANGAN
-//
-//  Created by IndratS on 01/03/21.
-//  Copyright © 2021 IndratSaputra. All rights reserved.
-//
-
 import Foundation
 import UIKit
 
@@ -24,17 +16,30 @@ extension String {
         if let result = NumberFormatter().number(from: stringWithoutComma) {
             return styler.string(from: result)!
         }
-        
         return self
     }
 }
 
 
 extension UIViewController {
+    
     func alert(message: String, title: String = "") {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let OKAction = UIAlertAction(title: "OK", style: .default, handler: nil)
         alertController.addAction(OKAction)
         self.present(alertController, animated: true, completion: nil)
     }
+    
+    func alertWarning(message: String){
+        let alert = UIAlertController(title: "Peringatan", message: message, preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        // add image
+        let imageIcon = UIImageView(frame: CGRect(x: 10, y: 10, width: 50, height: 50))
+        imageIcon.image = UIImage(named: "warning_ic")
+        alert.view.addSubview(imageIcon)
+        
+        alert.addAction(action)
+        self.present(alert, animated: true, completion: nil)
+    }
+    
 }

@@ -18,13 +18,14 @@
 		8FB9B0C025E7F52D0068F318 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FB9B0BE25E7F52D0068F318 /* LaunchScreen.storyboard */; };
 		8FB9B0C825E7F7A50068F318 /* SupportFiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB9B0C725E7F7A50068F318 /* SupportFiles.swift */; };
 		8FB9B0CA25E7FD780068F318 /* TabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB9B0C925E7FD780068F318 /* TabItem.swift */; };
-		8FBDBC7325ED04820039A3B6 /* ExtensionTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBDBC7225ED04820039A3B6 /* ExtensionTextField.swift */; };
 		8FC80C7E25ED2AF000FD4BE9 /* TransactionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC80C7D25ED2AF000FD4BE9 /* TransactionModel.swift */; };
 		8FDF243F25EB4EDA00789145 /* KeuanganCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8FDF243D25EB4EDA00789145 /* KeuanganCoreData.xcdatamodeld */; };
 		8FDF244425EB4F7800789145 /* TypeTransaction+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FDF244025EB4F7800789145 /* TypeTransaction+CoreDataClass.swift */; };
 		8FDF244525EB4F7800789145 /* TypeTransaction+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FDF244125EB4F7800789145 /* TypeTransaction+CoreDataProperties.swift */; };
 		8FDF244625EB4F7800789145 /* CategoryTransaction+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FDF244225EB4F7800789145 /* CategoryTransaction+CoreDataClass.swift */; };
 		8FDF244725EB4F7800789145 /* CategoryTransaction+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FDF244325EB4F7800789145 /* CategoryTransaction+CoreDataProperties.swift */; };
+		8FF9524F25EE953200A317A2 /* Validate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF9524E25EE953200A317A2 /* Validate.swift */; };
+		8FF9525125EE958600A317A2 /* MyExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF9525025EE958600A317A2 /* MyExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,13 +42,14 @@
 		8FB9B0C125E7F52D0068F318 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8FB9B0C725E7F7A50068F318 /* SupportFiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportFiles.swift; sourceTree = "<group>"; };
 		8FB9B0C925E7FD780068F318 /* TabItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItem.swift; sourceTree = "<group>"; };
-		8FBDBC7225ED04820039A3B6 /* ExtensionTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionTextField.swift; sourceTree = "<group>"; };
 		8FC80C7D25ED2AF000FD4BE9 /* TransactionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionModel.swift; sourceTree = "<group>"; };
 		8FDF243E25EB4EDA00789145 /* Keuangan.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Keuangan.xcdatamodel; sourceTree = "<group>"; };
 		8FDF244025EB4F7800789145 /* TypeTransaction+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TypeTransaction+CoreDataClass.swift"; sourceTree = "<group>"; };
 		8FDF244125EB4F7800789145 /* TypeTransaction+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TypeTransaction+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		8FDF244225EB4F7800789145 /* CategoryTransaction+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CategoryTransaction+CoreDataClass.swift"; sourceTree = "<group>"; };
 		8FDF244325EB4F7800789145 /* CategoryTransaction+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CategoryTransaction+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		8FF9524E25EE953200A317A2 /* Validate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validate.swift; sourceTree = "<group>"; };
+		8FF9525025EE958600A317A2 /* MyExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyExtension.swift; sourceTree = "<group>"; };
 		B7C9B437CC9500D721F5AD6E /* Pods-CATATAN KEUANGAN.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CATATAN KEUANGAN.release.xcconfig"; path = "Target Support Files/Pods-CATATAN KEUANGAN/Pods-CATATAN KEUANGAN.release.xcconfig"; sourceTree = "<group>"; };
 		D25D21D15D91843E7F3EFEAF /* Pods_CATATAN_KEUANGAN.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CATATAN_KEUANGAN.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -133,7 +135,6 @@
 				8FB9B0C125E7F52D0068F318 /* Info.plist */,
 				8FB9B0C725E7F7A50068F318 /* SupportFiles.swift */,
 				8FB9B0C925E7FD780068F318 /* TabItem.swift */,
-				8FBDBC7225ED04820039A3B6 /* ExtensionTextField.swift */,
 			);
 			path = "CATATAN KEUANGAN";
 			sourceTree = "<group>";
@@ -143,6 +144,8 @@
 			children = (
 				8FB9B0B325E7F52B0068F318 /* AppDelegate.swift */,
 				8FB9B0B525E7F52B0068F318 /* SceneDelegate.swift */,
+				8FF9524E25EE953200A317A2 /* Validate.swift */,
+				8FF9525025EE958600A317A2 /* MyExtension.swift */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -272,8 +275,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8FDF244425EB4F7800789145 /* TypeTransaction+CoreDataClass.swift in Sources */,
-				8FBDBC7325ED04820039A3B6 /* ExtensionTextField.swift in Sources */,
 				8FB9B0B825E7F52B0068F318 /* ViewController.swift in Sources */,
+				8FF9524F25EE953200A317A2 /* Validate.swift in Sources */,
 				8F67E7B625E946240022F0A1 /* TransactionViewController.swift in Sources */,
 				8FC80C7E25ED2AF000FD4BE9 /* TransactionModel.swift in Sources */,
 				8FB9B0C825E7F7A50068F318 /* SupportFiles.swift in Sources */,
@@ -285,6 +288,7 @@
 				8F67E7B925E950FE0022F0A1 /* Keuangan.swift in Sources */,
 				8FDF244725EB4F7800789145 /* CategoryTransaction+CoreDataProperties.swift in Sources */,
 				8FDF243F25EB4EDA00789145 /* KeuanganCoreData.xcdatamodeld in Sources */,
+				8FF9525125EE958600A317A2 /* MyExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

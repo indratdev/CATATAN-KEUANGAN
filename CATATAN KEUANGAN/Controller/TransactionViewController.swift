@@ -22,9 +22,11 @@ class TransactionViewController: UIViewController {
     
     let sf = SupportFiles()
     let keu = Keuangan()
+    let validate = Validate()
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var itemType: [TypeTransactionModel]?
     var itemCategory: [CategoryTransaction]?
+    
     var selectedTypeTrx: String?
     var selectedCategory: String?
     var valueDescription: String?
@@ -55,16 +57,29 @@ class TransactionViewController: UIViewController {
     
     // MARK: Submit Button
     @IBAction func submitBtnPressed(_ sender: UIButton) {
-        print(getDatePicker())
-        print(selectedCategory)
-        print(selectedTypeTrx)
-        print(descriptionTextField.text)
-        print(valueAmount)
-        let myDate = getDatePicker()
+//        print(getDatePicker())
+//        print(selectedCategory)
+//        print(selectedTypeTrx)
+//        print(descriptionTextField.text)
+//        print(valueAmount)
+//        let myDate = getDatePicker()
+//
+//        guard let myDescription = descriptionTextField.text else {return}
         
-        guard let myDescription = descriptionTextField.text else {return}
-        
-        alert(message: "test message", title: "test title")
+//        alert(message: "test message", title: "test title")
+//        if descriptionTextField.text!.isEmpty {
+//            print("deskripsi kosong")
+//        }else{
+//            print("ada isi")
+//        }
+        let formTextField: [UITextField] = [descriptionTextField, amountTextField]
+        let validData = validate.validateTextField(tf: formTextField)
+        print(validData)
+        if validData {
+            print("semua ada isi")
+        }else{
+            alertWarning(message: "Ada Data Kosong")
+        }
         
     }
     @IBAction func cancelButton(_ sender: UIButton) {
