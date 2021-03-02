@@ -18,7 +18,7 @@ struct SupportFiles {
       return "CATATAN KEUANGAN"
     }
     
-    func cancelButtonProcess(controller: ViewController){
+    func cancelButtonProcess(controller: UIViewController){
         controller.navigationController?.popViewController(animated: true)
         controller.dismiss(animated: true, completion: nil)
     }

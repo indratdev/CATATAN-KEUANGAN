@@ -68,7 +68,7 @@ class TransactionViewController: UIViewController {
         
     }
     @IBAction func cancelButton(_ sender: UIButton) {
-//        sf.cancelButtonProcess(controller: TransactionViewController.self)
+        sf.cancelButtonProcess(controller: self)
     }
     
     func fetchTypeTransaction(){
