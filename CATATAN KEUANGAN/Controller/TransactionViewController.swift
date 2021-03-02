@@ -57,26 +57,20 @@ class TransactionViewController: UIViewController {
     
     // MARK: Submit Button
     @IBAction func submitBtnPressed(_ sender: UIButton) {
-//        print(getDatePicker())
-//        print(selectedCategory)
-//        print(selectedTypeTrx)
-//        print(descriptionTextField.text)
-//        print(valueAmount)
-//        let myDate = getDatePicker()
-//
-//        guard let myDescription = descriptionTextField.text else {return}
+        //        print(getDatePicker())
+        //        print(selectedCategory)
+        //        print(selectedTypeTrx)
+        //        print(descriptionTextField.text)
+        //        print(valueAmount)
+        //        let myDate = getDatePicker()
+        //
+        //        guard let myDescription = descriptionTextField.text else {return}
         
-//        alert(message: "test message", title: "test title")
-//        if descriptionTextField.text!.isEmpty {
-//            print("deskripsi kosong")
-//        }else{
-//            print("ada isi")
-//        }
         let formTextField: [UITextField] = [descriptionTextField, amountTextField]
         let validData = validate.validateTextField(tf: formTextField)
-        print(validData)
         if validData {
             print("semua ada isi")
+//            alertSaving()
         }else{
             alertWarning(message: "Ada Data Kosong")
         }
@@ -171,8 +165,6 @@ extension TransactionViewController: UIPickerViewDelegate, UIPickerViewDataSourc
         default:
             return
         }
-        
-        
     }
 }
 
@@ -219,9 +211,7 @@ extension TransactionViewController: UITextFieldDelegate {
             if let myd:Double = Double(str)
             {
                 self.valueAmount = myd
-             }
-            
-            
+            }
             // returning 'false' so that textfield will not be updated here, instead from styling extension
             return false
         }
@@ -229,5 +219,3 @@ extension TransactionViewController: UITextFieldDelegate {
     }
     
 }
-
-

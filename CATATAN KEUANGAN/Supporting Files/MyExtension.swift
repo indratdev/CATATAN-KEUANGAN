@@ -31,15 +31,25 @@ extension UIViewController {
     }
     
     func alertWarning(message: String){
-        let alert = UIAlertController(title: "Peringatan", message: message, preferredStyle: .alert)
+        let alertController = UIAlertController(title: "Peringatan", message: message, preferredStyle: .alert)
         let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
         // add image
         let imageIcon = UIImageView(frame: CGRect(x: 10, y: 10, width: 50, height: 50))
         imageIcon.image = UIImage(named: "warning_ic")
-        alert.view.addSubview(imageIcon)
+        alertController.view.addSubview(imageIcon)
         
-        alert.addAction(action)
-        self.present(alert, animated: true, completion: nil)
+        alertController.addAction(action)
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
+    func alertSaving(){
+        let alertController = UIAlertController(title: "Konfirmasi", message: "Apakah Anda Yakin Untuk Simpan Data ?", preferredStyle: .alert)
+        let actionOK = UIAlertAction(title: "OK", style: .default, handler: nil)
+        let actionCancel = UIAlertAction(title: "BATAL", style: .cancel, handler: nil)
+        
+        alertController.addAction(actionOK)
+        alertController.addAction(actionCancel)
+        self.present(alertController, animated: true, completion: nil)
     }
     
 }
