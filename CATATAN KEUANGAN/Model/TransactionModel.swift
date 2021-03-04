@@ -9,5 +9,17 @@
 import Foundation
 
 struct TransactionModel {
-    
+    let date: Date
+    let transaction_type: String
+    let transaction_category: String
+    let description_trx: String
+    let amount: Double
+    let status: Int
+}
+
+
+struct TypeTransactionModel {
+    var name: String
+    var status: Int
+    var is_default: Bool
 }

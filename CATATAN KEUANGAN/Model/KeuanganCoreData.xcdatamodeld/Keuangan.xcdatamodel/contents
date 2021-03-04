@@ -5,13 +5,22 @@
         <attribute name="status" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="type" optional="YES" attributeType="String"/>
     </entity>
+    <entity name="TransactionDetails" representedClassName="TransactionDetails" syncable="YES">
+        <attribute name="amount" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="description_trx" optional="YES" attributeType="String"/>
+        <attribute name="status" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="transaction_category" optional="YES" attributeType="String"/>
+        <attribute name="transaction_type" optional="YES" attributeType="String"/>
+        <attribute name="trasaction_date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+    </entity>
     <entity name="TypeTransaction" representedClassName="TypeTransaction" syncable="YES">
         <attribute name="is_default" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="status" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
     </entity>
     <elements>
-        <element name="TypeTransaction" positionX="-63" positionY="-18" width="128" height="88"/>
         <element name="CategoryTransaction" positionX="-54" positionY="18" width="128" height="88"/>
+        <element name="TypeTransaction" positionX="-63" positionY="-18" width="128" height="88"/>
+        <element name="TransactionDetails" positionX="-54" positionY="27" width="128" height="133"/>
     </elements>
 </model>

@@ -57,20 +57,18 @@ class TransactionViewController: UIViewController {
     
     // MARK: Submit Button
     @IBAction func submitBtnPressed(_ sender: UIButton) {
-        //        print(getDatePicker())
-        //        print(selectedCategory)
-        //        print(selectedTypeTrx)
-        //        print(descriptionTextField.text)
-        //        print(valueAmount)
-        //        let myDate = getDatePicker()
-        //
-        //        guard let myDescription = descriptionTextField.text else {return}
+        guard let myTypeTrx = selectedTypeTrx else {return}
+        guard let myCategory = selectedCategory else {return}
+        guard let myDescription = descriptionTextField.text else {return}
         
         let formTextField: [UITextField] = [descriptionTextField, amountTextField]
         let validData = validate.validateTextField(tf: formTextField)
+        
         if validData {
-            print("semua ada isi")
-//            alertSaving()
+            let trx = TransactionModel(date: getDatePicker(), transaction_type: myTypeTrx, transaction_category: myCategory, description_trx: myDescription, amount: valueAmount, status: 1)
+            DispatchQueue.main.async {
+                self.keu.saveTransaction(data: trx)
+            }
         }else{
             alertWarning(message: "Ada Data Kosong")
         }
@@ -80,17 +78,17 @@ class TransactionViewController: UIViewController {
         sf.cancelButtonProcess(controller: self)
     }
     
-    func fetchTypeTransaction(){
-        let typeContext = NSFetchRequest<NSFetchRequestResult>(entityName: "TypeTransaction")
-        do {
-            let data = try context.fetch(typeContext)
-            DispatchQueue.main.async {
-                self.typeTransactionPickerView.reloadAllComponents()
-            }
-        }catch(let err){
-            print("error pickerview: \(err)")
-        }
-    }
+//    func fetchTypeTransaction(){
+//        let typeContext = NSFetchRequest<NSFetchRequestResult>(entityName: "TypeTransaction")
+//        do {
+//            let data = try context.fetch(typeContext)
+//            DispatchQueue.main.async {
+//                self.typeTransactionPickerView.reloadAllComponents()
+//            }
+//        }catch(let err){
+//            print("error pickerview: \(err)")
+//        }
+//    }
 }
 
 // MARK: UI & Default
@@ -217,5 +215,4 @@ extension TransactionViewController: UITextFieldDelegate {
         }
         return true
     }
-    
 }

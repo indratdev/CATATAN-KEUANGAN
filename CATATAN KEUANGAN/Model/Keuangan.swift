@@ -102,7 +102,7 @@ struct Keuangan {
     
     func resetAllRecords(in entity : String) // entity = Your_Entity_Name
     {
-
+        
         let context = ( UIApplication.shared.delegate as! AppDelegate ).persistentContainer.viewContext
         let deleteFetch = NSFetchRequest<NSFetchRequestResult>(entityName: entity)
         let deleteRequest = NSBatchDeleteRequest(fetchRequest: deleteFetch)
@@ -118,12 +118,60 @@ struct Keuangan {
         }
     }
     
+    func saveTransaction(data: TransactionModel){
+        let entity = NSEntityDescription.entity(forEntityName: "TransactionDetails", in: context)!
+        let task = NSManagedObject(entity: entity, insertInto: context)
+        
+        task.setValue(data.date, forKey: "trasaction_date")
+        task.setValue(data.transaction_type, forKey: "transaction_type")
+        task.setValue(data.transaction_category, forKey: "transaction_category")
+        task.setValue(data.description_trx, forKey: "description_trx")
+        task.setValue(data.amount, forKey: "amount")
+        task.setValue(data.status, forKey: "status")
+        do {
+            try context.save()
+            print("Save Trasaction Success")
+        }catch(let err){
+            print("Error in save transaction :\(err)")
+        }
+    }
+    
+    func fetchTransactionAll() -> [TransactionDetails] {
+        var data: [TransactionDetails] = []
+        do {
+            data = try context.fetch(TransactionDetails.fetchRequest())
+        }catch(let err){
+            print("Error fetch trx All : \(err)")
+        }
+        
+        return data
+    }
+    
+    func fetchTransactionAll2() -> [TransactionModel] {
+        var trx = [TransactionModel]()
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "TransactionDetails")
+        do {
+            let result = try context.fetch(fetchRequest) as! [NSManagedObject]
+            result.forEach { (data) in
+                trx.append(
+                    TransactionModel(
+                        date: data.value(forKey: "trasaction_date") as! Date
+                        , transaction_type: data.value(forKey: "transaction_type") as! String
+                        , transaction_category: data.value(forKey: "transaction_category") as! String
+                        , description_trx: data.value(forKey: "description_trx") as! String
+                        , amount: data.value(forKey: "amount") as! Double
+                        , status: data.value(forKey: "status") as! Int
+                    )
+                )
+            }
+            
+        }catch(let err){
+            print("Error when saving: \(err)")
+        }
+        return trx
+    }
+    
 }
 
 
 
-struct TypeTransactionModel {
-    var name: String
-    var status: Int
-    var is_default: Bool
-}

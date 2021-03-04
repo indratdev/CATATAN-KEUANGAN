@@ -11,6 +11,7 @@ import UIKit
 
 struct SupportFiles {
     var sizeFontTitle:CGFloat = CGFloat(18)
+    var sizeFontType:CGFloat = CGFloat(13)
     var textColor: UIColor = UIColor(named: "black") ?? UIColor.black
     let cornerRadiusValue: CGFloat = 10
     
