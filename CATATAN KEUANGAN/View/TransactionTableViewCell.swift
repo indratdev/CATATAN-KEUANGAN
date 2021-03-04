@@ -12,6 +12,7 @@ class TransactionTableViewCell: UITableViewCell {
     @IBOutlet weak var typeLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var amountLabel: UILabel!
+    @IBOutlet weak var myView: UIView!
     
     
     static let identifier = "TransactionAllIdentifier"

@@ -47,8 +47,8 @@ class ViewController: UIViewController {
 
 extension ViewController {
     func initialLoad(){
-        viewStatus.layer.cornerRadius = sf.cornerRadiusValue
-        viewTransaction.layer.cornerRadius = sf.cornerRadiusValue
+        let datas = [viewStatus, viewTransaction, transactionTableView]
+        sf.settViewCornerRadius(view: datas)
     }
     
     func checkDataCategory(){

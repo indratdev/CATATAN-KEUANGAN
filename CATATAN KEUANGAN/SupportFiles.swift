@@ -23,4 +23,10 @@ struct SupportFiles {
         controller.navigationController?.popViewController(animated: true)
         controller.dismiss(animated: true, completion: nil)
     }
+    
+    func settViewCornerRadius(view: [Optional<UIView>]){
+        for data in view {
+            data?.layer.cornerRadius = cornerRadiusValue
+        }
+    }
 }
